@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Hamdy | Flutter Developer &amp; Creative Technologist</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Portfolio of Ahmed Hamdy — Senior Flutter Developer crafting high-performance, 60fps cross-platform mobile apps with Dart, clean architecture, and fluid digital experiences.">
+  <meta name="keywords" content="Ahmed Hamdy, Flutter Developer, Dart, Mobile App Developer, Android Developer, Cross-Platform, iOS, Firebase, UI/UX, Creative Technologist">
+  <meta name="author" content="Ahmed Hamdy">
+  <meta name="theme-color" content="#0A0A0F">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Hamdy | Flutter Developer &amp; Creative Technologist">
+  <meta property="og:description" content="I build digital experiences with Flutter, Dart, and high-performance cross-platform architectures.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ahmed Hamdy | Flutter Developer">
+  <meta name="twitter:description" content="I build digital experiences with Flutter, Dart, and high-performance mobile architectures.">
+  <meta name="twitter:image" content="assets/images/profile.jpg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Modular Stylesheets (in strict architecture order) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Accessible Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Lightweight Preloader -->
+  <div id="preloader" class="preloader" aria-live="polite" aria-label="Loading portfolio experience">
+    <div class="preloader-core">
+      <div class="preloader-spinner" aria-hidden="true"></div>
+      <div class="preloader-progress-track">
+        <div id="preloader-progress-bar" class="preloader-progress-bar"></div>
+      </div>
+      <span id="preloader-status" class="preloader-status">INITIALIZING SYSTEM...</span>
+    </div>
+  </div>
+
+  <!-- Cursor Intelligence Elements (Desktop Only) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower" aria-hidden="true"></div>
+  <div id="cursor-trail-container" aria-hidden="true"></div>
+
+  <!-- Fixed Glass Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <!-- Logo styled as a code tag <AM /> -->
+      <a href="#home" class="logo-link magnetic-target" aria-label="Ahmed Hamdy Portfolio Home">
+        <span class="logo-code">
+          <span class="code-bracket">&lt;</span>
+          <span class="code-text">AM</span>
+          <span class="code-slash">/</span>
+          <span class="code-bracket">&gt;</span>
+        </span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- 1. HOME (HERO) SECTION -->
+    <section class="hero-section" id="home" aria-label="Introduction and 3D Core">
+      <!-- 3D Digital Core Stage -->
+      <div id="hero-3d-container" class="hero-3d-stage" aria-hidden="true" data-depth="0.15">
+        <canvas id="hero-fallback-canvas" style="display:none; width:100%; height:100%;"></canvas>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <span class="section-tag reveal-init delay-100">&lt;digital_architect&gt;</span>
+          
+          <h1 class="hero-headline" id="hero-headline">
+            <span class="reveal-text reveal-init delay-200">I BUILD DIGITAL EXPERIENCES</span>
+          </h1>
+
+          <div class="hero-subtitle reveal-init delay-300">
+            <span class="badge-role">Flutter Developer</span>
+            <span>&amp; Creative Mobile Technologist</span>
+          </div>
+
+          <p class="hero-tagline reveal-init delay-400">
+            Engineering pixel-perfect, 60fps cross-platform applications with Dart, Firebase, and scalable clean architecture. Turning ambitious visions into responsive mobile reality.
+          </p>
+
+          <div class="hero-cta-group reveal-init delay-500">
+            <a href="#projects" class="btn btn-primary magnetic-target" id="hero-btn-projects">
+              <span>View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-target" id="hero-btn-contact">
+              <span>Get in Touch</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-row reveal-init delay-600">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number gradient-text-accent">15+</span>
+              <span class="hero-stat-label">Mobile Apps Shipped</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number gradient-text-primary">99.9%</span>
+              <span class="hero-stat-label">Crash-Free Rate</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number gradient-text-accent">60 FPS</span>
+              <span class="hero-stat-label">Fluid UI Rendering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading" data-depth="0.1">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;biography&gt;</span>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+          <p class="section-subtitle">A glimpse into my background, engineering philosophy, and passion for mobile craft.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Photo Placeholder -->
+          <div class="about-photo-wrapper reveal-init reveal-fade-left">
+            <div class="about-photo-frame">
+              <!-- ADD YOUR PHOTO HERE -->
+              <img 
+                src="assets/images/profile.jpg" 
+                alt="Ahmed Hamdy - Flutter Developer" 
+                class="about-photo"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='assets/images/pro.jpeg';"
+              >
+              <div class="about-photo-badge">
+                <span class="tag chip-cyan">Ahmed Hamdy</span>
+                <span class="tag chip-red">Open to Work</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Content -->
+          <div class="about-content-card reveal-init reveal-fade-right">
+            <h3 class="about-name">Hi, I'm <span class="gradient-text-accent">Ahmed Hamdy</span></h3>
+            <p class="about-bio">
+              I am a specialized <strong>Flutter Developer and Mobile Software Engineer</strong> with a deep passion for building intuitive, performant, and resilient applications. My journey is founded on transforming complex challenges into elegant, maintainable code architectures.
+            </p>
+            <p class="about-bio">
+              I specialize in cross-platform development across iOS and Android using Flutter and Dart, integrating robust state management patterns (BLoC, Provider), offline-first local persistence (SQLite, Hive), and seamless REST/Firebase backends.
+            </p>
+
+            <div class="about-pillars">
+              <div class="service-card" style="padding: 16px;">
+                <h4 style="font-size: 1rem; color: var(--color-accent); margin-bottom: 4px;">Clean Architecture</h4>
+                <p style="font-size: 0.85rem;">Modular, testable, and decoupled codebases designed for scale.</p>
+              </div>
+              <div class="service-card" style="padding: 16px;">
+                <h4 style="font-size: 1rem; color: var(--color-primary-light); margin-bottom: 4px;">Performance Driven</h4>
+                <p style="font-size: 0.85rem;">Zero jank, optimized widget build trees, and minimal memory footprint.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MY EDUCATION SECTION -->
+    <section class="section education-section" id="education" aria-labelledby="education-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;academics&gt;</span>
+          <h2 class="section-title" id="education-heading">My Education</h2>
+          <p class="section-subtitle">Academic foundations in Computer Science, Systems, and Software Engineering.</p>
+        </div>
+
+        <div class="education-wrapper reveal-init reveal-scale">
+          <div class="education-card">
+            <div class="education-header">
+              <div>
+                <h3 class="education-institution">New Salheya University</h3>
+                <div class="education-faculty">Faculty of Computers &amp; Information</div>
+              </div>
+              <div>
+                <span class="tag chip-cyan" style="font-size: 0.85rem; padding: 6px 14px; font-weight: 600;">Grade: Very Good</span>
+              </div>
+            </div>
+
+            <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: var(--space-md);">
+              Comprehensive curriculum emphasizing Software Engineering Principles, Advanced Data Structures, Algorithms, Distributed Database Systems, Object-Oriented Analysis &amp; Design, and Mobile Application Architectures.
+            </p>
+
+            <div class="education-chips" aria-label="Key Academic Domains">
+              <span class="chip chip-cyan"># Information Technology (IT)</span>
+              <span class="chip chip-red"># Computer Science (CS)</span>
+              <span class="chip chip-cyan"># Artificial Intelligence (AI)</span>
+              <span class="chip"># Mobile Architecture</span>
+              <span class="chip"># Data Structures &amp; Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MY EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;career_path&gt;</span>
+          <h2 class="section-title" id="experience-heading">My Experience</h2>
+          <p class="section-subtitle">Professional milestones focused on Flutter and Android application development.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <!-- Timeline Entry 1 -->
+          <article class="timeline-entry reveal-init">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                <h3 style="font-size: 1.25rem; color: #FFFFFF;">Senior Flutter Developer</h3>
+                <span class="tag chip-red">2024 — Present</span>
+              </div>
+              <div style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.875rem; margin-bottom: 12px;">Mobile Solutions &amp; System Architecture</div>
+              <ul style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; display: flex; flex-direction: column; gap: 8px; list-style-type: disc; padding-left: 20px;">
+                <li>Architected full-cycle Flutter mobile solutions for enterprise clients using BLoC pattern and Clean Architecture.</li>
+                <li>Optimized rendering pipelines and eliminated memory leaks, achieving smooth 60fps scrolling across 100+ low-end and flagship devices.</li>
+                <li>Configured automated CI/CD pipelines with GitHub Actions for Fastlane iOS and Android builds.</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;">
+                <span class="chip">Flutter</span>
+                <span class="chip">Dart</span>
+                <span class="chip">BLoC</span>
+                <span class="chip">Clean Architecture</span>
+                <span class="chip">CI/CD</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Entry 2 -->
+          <article class="timeline-entry reveal-init">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                <h3 style="font-size: 1.25rem; color: #FFFFFF;">Flutter &amp; Android Developer</h3>
+                <span class="tag chip-cyan">2023 — 2024</span>
+              </div>
+              <div style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.875rem; margin-bottom: 12px;">Cross-Platform App Development</div>
+              <ul style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; display: flex; flex-direction: column; gap: 8px; list-style-type: disc; padding-left: 20px;">
+                <li>Developed interactive e-commerce and utility applications with offline-first caching via SQLite and Hive.</li>
+                <li>Integrated Firebase Authentication, Cloud Firestore, Remote Config, and real-time push notifications.</li>
+                <li>Collaborated closely with UI/UX designers to translate Figma mockups into responsive, accessible Flutter widgets.</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;">
+                <span class="chip">Flutter</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">SQLite / Hive</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">Figma</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Entry 3 -->
+          <article class="timeline-entry reveal-init">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                <h3 style="font-size: 1.25rem; color: #FFFFFF;">Junior Mobile App Developer</h3>
+                <span class="tag">2022 — 2023</span>
+              </div>
+              <div style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.875rem; margin-bottom: 12px;">Android &amp; Native Bridge Integration</div>
+              <ul style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; display: flex; flex-direction: column; gap: 8px; list-style-type: disc; padding-left: 20px;">
+                <li>Built core Android modules and bridged native platform channels (Camera, Geolocation, Bluetooth) to Dart.</li>
+                <li>Refactored legacy codebases to improve readability, decrease build times, and raise test coverage.</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;">
+                <span class="chip">Android</span>
+                <span class="chip">Dart</span>
+                <span class="chip">Java</span>
+                <span class="chip">Platform Channels</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MY SKILLS SECTION (CONSTELLATION NETWORK) -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;tech_stack&gt;</span>
+          <h2 class="section-title" id="skills-heading">My Skills</h2>
+          <p class="section-subtitle">Interactive Constellation Network: Click any node to inspect proficiency, notes, and connected projects.</p>
+        </div>
+
+        <div class="skills-wrapper reveal-init">
+          <!-- Interactive Constellation Canvas -->
+          <div class="skills-graph-container" id="skills-graph-wrapper">
+            <canvas id="skills-graph-canvas" class="skills-graph-canvas" aria-label="Interactive skills constellation diagram" role="img"></canvas>
+            
+            <div id="skills-info-overlay" class="skills-info-overlay" aria-live="polite">
+              <h4 id="skill-detail-title" style="font-size: 1.1rem; color: #FFFFFF; margin-bottom: 4px;">Select a Node</h4>
+              <p id="skill-detail-note" style="font-size: 0.875rem; color: var(--color-text-secondary);">Click on any skill node above or in the list below to reveal architectural details and highlights.</p>
+            </div>
+          </div>
+
+          <!-- Accessible DOM Fallback / Mobile View -->
+          <div class="skills-accessible-list" aria-label="Technology Skills Directory">
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Flutter" data-category="Framework" data-related="todo,news" data-note="Expert in building robust, performant cross-platform applications with reactive state and custom render trees.">
+              <span class="tag chip-cyan">Mobile</span>
+              <strong>Flutter</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Dart" data-category="Language" data-related="todo,news" data-note="Core language mastery: async/await streams, null safety, generators, and OOP design patterns.">
+              <span class="tag chip-cyan">Language</span>
+              <strong>Dart</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Firebase" data-category="Cloud" data-related="todo,news" data-note="Full integration: Cloud Firestore, Auth, Storage, Cloud Messaging (FCM), and Analytics.">
+              <span class="tag chip-red">Cloud</span>
+              <strong>Firebase</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="REST APIs" data-category="Networking" data-related="news" data-note="HTTP client architecture (Dio, Retrofit), JSON serialization, interceptors, and caching layers.">
+              <span class="tag chip-cyan">Network</span>
+              <strong>REST APIs</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Git" data-category="Version Control" data-related="todo,news" data-note="Branching strategies, Gitflow, pull requests, resolving merge conflicts, and CI hooks.">
+              <span class="tag">DevOps</span>
+              <strong>Git</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="HTML" data-category="Web" data-related="" data-note="Semantic markup, accessibility (ARIA), SEO best practices, and document structure.">
+              <span class="tag">Web</span>
+              <strong>HTML5</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="CSS" data-category="Web" data-related="" data-note="Modern CSS3, responsive design, Flexbox, Grid, CSS custom properties, and animations.">
+              <span class="tag">Web</span>
+              <strong>CSS3</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="JavaScript" data-category="Web" data-related="" data-note="Vanilla ES6+, DOM manipulation, canvas 2D contexts, WebGL integration, and event systems.">
+              <span class="tag">Web</span>
+              <strong>JavaScript</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="UI/UX" data-category="Design" data-related="todo,news" data-note="User-centered design principles, interactive prototyping, micro-animations, and visual balance.">
+              <span class="tag chip-red">Design</span>
+              <strong>UI/UX</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Figma" data-category="Design Tool" data-related="todo,news" data-note="Wireframing, UI kits, design systems, design tokens, and developer handoff.">
+              <span class="tag chip-red">Design</span>
+              <strong>Figma</strong>
+            </button>
+
+            <button class="service-card skill-tag-card magnetic-target" data-skill="Photoshop" data-category="Graphics" data-related="" data-note="Asset preparation, vector rasterization, image optimization, and branding visuals.">
+              <span class="tag">Graphics</span>
+              <strong>Photoshop</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED PROJECTS SECTION -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;portfolio&gt;</span>
+          <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications engineered with Flutter. Experience 3D tilt response and explore full case studies.</p>
+        </div>
+
+        <div class="projects-gallery-window" id="projects-gallery-window">
+          <div class="projects-grid">
+            
+            <!-- Project 1: Todo App -->
+            <div class="tilt-card-wrapper reveal-init reveal-fade-left">
+              <article 
+                class="tilt-card magnetic-target" 
+                id="project-todo"
+                data-project-id="todo" 
+                data-glow="#38BDF8" 
+                data-glow-rgba="rgba(56, 189, 248, 0.25)"
+                tabindex="0"
+                role="button"
+                aria-label="View case study for Todo App"
+              >
+                <div class="card-glare" aria-hidden="true"></div>
+                
+                <div class="card-image-box">
+                  <img 
+                    src="assets/images/project-todo.jpg" 
+                    alt="Todo Flutter Application interface screenshot" 
+                    class="card-image"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="card-body">
+                  <h3 class="card-title">Todo — Productivity Suite</h3>
+                  <p class="card-desc">
+                    High-performance task management application featuring offline-first data synchronization, custom Dart gestures, intuitive calendar scheduling, and biometric authentication.
+                  </p>
+                  
+                  <div class="card-tags">
+                    <span class="tag chip-cyan">Flutter</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">SQLite / Hive</span>
+                    <span class="tag">BLoC</span>
+                  </div>
+
+                  <div class="card-footer-cta">
+                    <span>Explore Case Study</span>
+                    <span class="arrow-icon" aria-hidden="true">→</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 2: News App -->
+            <div class="tilt-card-wrapper reveal-init reveal-fade-right">
+              <article 
+                class="tilt-card magnetic-target" 
+                id="project-news"
+                data-project-id="news" 
+                data-glow="#BC0202" 
+                data-glow-rgba="rgba(188, 2, 2, 0.25)"
+                tabindex="0"
+                role="button"
+                aria-label="View case study for News App"
+              >
+                <div class="card-glare" aria-hidden="true"></div>
+
+                <div class="card-image-box">
+                  <img 
+                    src="assets/images/project-news.jpg" 
+                    alt="News Flutter Application interface screenshot" 
+                    class="card-image"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="card-body">
+                  <h3 class="card-title">PulseNews — Global Feed</h3>
+                  <p class="card-desc">
+                    Dynamic news publishing and reading application with categorized feeds, real-time REST API consumption, offline article caching, bookmarking, and reader mode.
+                  </p>
+                  
+                  <div class="card-tags">
+                    <span class="tag chip-red">Flutter</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Provider</span>
+                  </div>
+
+                  <div class="card-footer-cta">
+                    <span>Explore Case Study</span>
+                    <span class="arrow-icon" aria-hidden="true">→</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHAT PEOPLE SAY SECTION (TESTIMONIALS SLIDER) -->
+    <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init" style="text-align: center;">
+          <span class="section-tag">&lt;testimonials&gt;</span>
+          <h2 class="section-title" id="testimonials-heading">What People Say</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Feedback from team leads, tech founders, and product managers who collaborated with me.</p>
+        </div>
+
+        <div class="testimonials-slider reveal-init" id="testimonials-slider" aria-roledescription="carousel" aria-label="Client Testimonials">
+          <div class="testimonials-track" id="testimonials-track">
+            
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <div class="testimonial-card">
+                <div class="rating-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <blockquote class="testimonial-quote">
+                  "Ahmed delivered our cross-platform Flutter application ahead of schedule with flawless 60fps performance and gorgeous animations. His grasp of clean Dart architecture was invaluable to our mobile launch."
+                </blockquote>
+                <div class="testimonial-author-box">
+                  <div class="testimonial-avatar" aria-hidden="true">OK</div>
+                  <div>
+                    <div class="testimonial-author-name">Omar Khaled</div>
+                    <div class="testimonial-author-role">Lead Product Manager, TechVentures</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <div class="testimonial-card">
+                <div class="rating-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <blockquote class="testimonial-quote">
+                  "His attention to UI detail and clean state management saved our startup countless hours of refactoring. Ahmed communicates clearly, solves difficult performance bottlenecks, and is an exceptional mobile engineer."
+                </blockquote>
+                <div class="testimonial-author-box">
+                  <div class="testimonial-avatar" aria-hidden="true">SJ</div>
+                  <div>
+                    <div class="testimonial-author-name">Sarah Jenkins</div>
+                    <div class="testimonial-author-role">Co-Founder &amp; CTO, NexusApp</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <div class="testimonial-card">
+                <div class="rating-stars" aria-label="5 out of 5 stars">
+                  ★★★★★
+                </div>
+                <blockquote class="testimonial-quote">
+                  "The offline SQLite caching and Firebase sync Ahmed implemented were rock solid under heavy testing. He brings proactive creative energy and unwavering technical competence to every sprint."
+                </blockquote>
+                <div class="testimonial-author-box">
+                  <div class="testimonial-avatar" aria-hidden="true">KM</div>
+                  <div>
+                    <div class="testimonial-author-name">Karim Mostafa</div>
+                    <div class="testimonial-author-role">Mobile Engineering Director, Omnia Software</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="testimonial-controls">
+            <button id="testimonial-prev-btn" class="btn-icon magnetic-target" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonial slides"></div>
+            <button id="testimonial-next-btn" class="btn-icon magnetic-target" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. MY SERVICES SECTION -->
+    <section class="section services-section" id="services" aria-labelledby="services-heading">
+      <div class="section-container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">&lt;solutions&gt;</span>
+          <h2 class="section-title" id="services-heading">My Services</h2>
+          <p class="section-subtitle">Tailored mobile engineering services designed to bring high-impact digital products to market.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal-init delay-100">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="service-title">Cross-Platform Apps</h3>
+            <p class="service-desc">
+              End-to-end mobile development using Flutter and Dart. A single, performant codebase deployed natively to both iOS and Android stores with unified aesthetics.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card reveal-init delay-200">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="service-title">Custom UI/UX &amp; Motion</h3>
+            <p class="service-desc">
+              Pixel-perfect translation from Figma into fluid, interactive Flutter interfaces. Micro-animations, responsive layout systems, and dark/light mode architectures.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal-init delay-300">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="service-title">Backend &amp; API Integration</h3>
+            <p class="service-desc">
+              Seamless connection to RESTful endpoints, GraphQL, and Firebase backends. Implementation of offline-first persistence with SQLite, secure storage, and real-time sockets.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card reveal-init delay-400">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="service-title">Optimization &amp; Refactoring</h3>
+            <p class="service-desc">
+              Profiling memory consumption, fixing UI stutter, architecting maintainable state structures (BLoC, Provider), writing unit tests, and improving build pipelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- Descriptive Paragraph below Cards -->
+        <div class="services-summary-card reveal-init delay-500">
+          <p style="font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.75;">
+            Dedicated to engineering high-performance, robust, and scalable mobile solutions that elevate digital products. Leveraging clean architecture and modern development standards to ensure your application performs gracefully across millions of devices worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. GET IN TOUCH SECTION (CONTACT PORTAL) -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <!-- Interactive Contact Background Canvas with converging glow lines -->
+      <canvas id="contact-portal-canvas" class="contact-canvas-bg" aria-hidden="true"></canvas>
+
+      <div class="section-container contact-inner">
+        <!-- Contact Left Column -->
+        <div class="contact-card reveal-init reveal-fade-left">
+          <span class="section-tag">&lt;connect&gt;</span>
+          <h2 class="section-title" id="contact-heading" style="margin-bottom: var(--space-sm);">Get in Touch</h2>
+          <p class="section-subtitle" style="font-size: 1rem; margin-bottom: var(--space-lg);">
+            Have a project in mind, an engineering role to fill, or want to discuss Flutter architecture? Reach out directly via WhatsApp or Email.
+          </p>
+
+          <div class="contact-channels">
+            <!-- WhatsApp Link -->
+            <a href="https://wa.me/201015694200" target="_blank" rel="noopener noreferrer" class="contact-channel-btn btn-whatsapp magnetic-target" id="contact-whatsapp-link">
+              <div class="channel-info">
+                <div class="channel-icon whatsapp" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div>
+                  <div class="channel-title">WhatsApp</div>
+                  <div class="channel-address">+20 101 569 4200</div>
+                </div>
+              </div>
+              <span class="tag chip-cyan">Chat Now →</span>
+            </a>
+
+            <!-- Gmail Link -->
+            <a href="mailto:ahmedhamdy.dev@gmail.com" class="contact-channel-btn btn-gmail magnetic-target" id="contact-gmail-link">
+              <div class="channel-info">
+                <div class="channel-icon gmail" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="channel-title">Direct Email</div>
+                  <div class="channel-address">ahmedhamdy.dev@gmail.com</div>
+                </div>
+              </div>
+              <span class="tag chip-red">Send Email →</span>
+            </a>
+          </div>
+
+          <!-- Quick Copy Email Box -->
+          <div class="copy-email-box">
+            <span class="copy-email-text" id="email-address-text">ahmedhamdy.dev@gmail.com</span>
+            <button type="button" class="copy-btn magnetic-target" id="copy-email-btn" aria-label="Copy email address to clipboard">
+              <span id="copy-btn-text">Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Right Column: Quick Interactive Message Portal -->
+        <div class="contact-card reveal-init reveal-fade-right">
+          <h3 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: var(--space-md); display: flex; align-items: center; gap: 8px;">
+            <span class="badge-role" style="font-size: 0.75rem;">Fast Message</span>
+            <span>Send Direct Dispatch</span>
+          </h3>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Project Details</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your mobile vision, timeframe, or role requirements..." required></textarea>
+            </div>
+
+            <div id="form-feedback" class="form-feedback" role="alert"></div>
+
+            <button type="submit" class="btn btn-primary magnetic-target" id="contact-submit-btn" style="width: 100%;">
+              <span>Transmit Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <a href="#home" class="logo-link magnetic-target" aria-label="Back to top">
+        <span class="logo-code">
+          <span class="code-bracket">&lt;</span>
+          <span class="code-text">AM</span>
+          <span class="code-slash">/</span>
+          <span class="code-bracket">&gt;</span>
+        </span>
+      </a>
+
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <p class="footer-copy">
+        &copy; 2026 Ahmed Hamdy. Crafted with precision, vanilla JS performance &amp; passion.
+      </p>
+    </div>
+  </footer>
+
+  <!-- PROJECT CASE STUDY DETAIL MODAL (Used by tilt-cards.js and transitions.js) -->
+  <div id="project-detail-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-project-title">
+    <div class="project-modal-backdrop" id="modal-backdrop"></div>
+    <div class="project-modal-dialog" id="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project modal">&times;</button>
+      
+      <img id="modal-project-image" src="" alt="Project Preview" class="modal-hero-image">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: var(--space-md);">
+        <h2 id="modal-project-title" style="font-size: 2rem; color: #FFFFFF;">Project Title</h2>
+        <div id="modal-project-tags" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
+      </div>
+
+      <div class="modal-sections-staged">
+        <!-- Stage 1: Problem -->
+        <div class="modal-stage-block">
+          <h3 class="modal-stage-title">
+            <span class="section-tag" style="margin-bottom: 0;">01</span> The Problem
+          </h3>
+          <p id="modal-problem-text" style="color: var(--color-text-secondary); line-height: 1.65;"></p>
+        </div>
+
+        <!-- Stage 2: Solution -->
+        <div class="modal-stage-block">
+          <h3 class="modal-stage-title">
+            <span class="section-tag" style="margin-bottom: 0;">02</span> The Engineering Solution
+          </h3>
+          <p id="modal-solution-text" style="color: var(--color-text-secondary); line-height: 1.65;"></p>
+        </div>
+
+        <!-- Stage 3: Tech Stack -->
+        <div class="modal-stage-block">
+          <h3 class="modal-stage-title">
+            <span class="section-tag" style="margin-bottom: 0;">03</span> Architectural Tech Stack
+          </h3>
+          <ul id="modal-tech-list" style="color: var(--color-text-secondary); line-height: 1.65; padding-left: 20px; list-style-type: disc;"></ul>
+        </div>
+
+        <!-- Stage 4: Results -->
+        <div class="modal-stage-block">
+          <h3 class="modal-stage-title">
+            <span class="section-tag" style="margin-bottom: 0;">04</span> Measurable Results &amp; Impact
+          </h3>
+          <p id="modal-results-text" style="color: var(--color-text-secondary); line-height: 1.65;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN Three.js with robust fallback detection -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Modular Vanilla JS Architecture -->
+  <script src="js/cursor.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/scroll-story.js"></script>
+  <script src="js/skills-graph.js"></script>
+  <script src="js/tilt-cards.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/contact-portal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

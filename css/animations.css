@@ -1,0 +1,148 @@
+/**
+ * ============================================================================
+ * AHMED HAMDY — FLUTTER DEVELOPER & CREATIVE TECHNOLOGIST
+ * Animations & GPU Performance
+ * File: css/animations.css
+ * ============================================================================
+ */
+
+/* --- Hardware Acceleration & Reveal Classes --- */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.reveal-fade-left {
+  transform: translateX(-30px);
+}
+
+.reveal-init.reveal-fade-right {
+  transform: translateX(30px);
+}
+
+.reveal-init.reveal-scale {
+  transform: scale(0.92);
+}
+
+.reveal-init.is-revealed {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* --- Keyframe Animations (Transform & Opacity Only) --- */
+@keyframes floatGently {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGently 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes lightGather {
+  0% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-gather {
+  animation: lightGather 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes textMaskReveal {
+  0% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text-reveal {
+  animation: textMaskReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Typography Glitch / Morph Subtle Flicker */
+@keyframes cyberFlicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.7; }
+  94% { opacity: 1; }
+  96% { opacity: 0.85; }
+  97% { opacity: 1; }
+}
+
+.cyber-flicker {
+  animation: cyberFlicker 6s infinite;
+}
+
+/* --- Prefers-Reduced-Motion Respect --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .tilt-card {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .custom-cursor,
+  .custom-cursor-follower,
+  .cursor-trail-dot {
+    display: none !important;
+  }
+
+  .hero-3d-stage {
+    opacity: 0.9 !important;
+  }
+}

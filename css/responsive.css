@@ -1,0 +1,201 @@
+/**
+ * ============================================================================
+ * AHMED HAMDY — FLUTTER DEVELOPER & CREATIVE TECHNOLOGIST
+ * Responsive Breakpoints (320px – 4K)
+ * File: css/responsive.css
+ * ============================================================================
+ */
+
+/* --- Tablet & Smaller Laptops (<= 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --space-4xl: 4.5rem;
+    --space-3xl: 3.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-photo-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .skills-graph-container {
+    height: 400px;
+  }
+}
+
+/* --- Mobile Devices (<= 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --space-4xl: 3.5rem;
+    --space-3xl: 2.75rem;
+    --space-2xl: 2rem;
+  }
+
+  /* Navigation Drawer */
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(10, 10, 15, 0.96);
+    backdrop-filter: var(--glass-blur-heavy);
+    -webkit-backdrop-filter: var(--glass-blur-heavy);
+    border-left: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(80px + var(--space-xl)) var(--space-xl) var(--space-2xl);
+    gap: var(--space-md);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+    z-index: var(--z-nav);
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: var(--text-lg);
+    display: block;
+    width: 100%;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding-top: calc(70px + var(--space-xl));
+    min-height: auto;
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-headline {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-stats-row {
+    gap: var(--space-lg);
+  }
+
+  .hero-stat-number {
+    font-size: var(--text-2xl);
+  }
+
+  /* Timeline */
+  .timeline-container {
+    padding-left: 30px;
+  }
+
+  .timeline-node {
+    left: -24px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-card {
+    padding: var(--space-lg);
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .testimonial-quote {
+    font-size: var(--text-base);
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    padding: var(--space-lg);
+  }
+}
+
+/* --- Small Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .skills-graph-container {
+    height: 320px;
+  }
+}
+
+/* --- Touch Devices (Disable Cursor Intelligence Follower) --- */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-follower,
+  .cursor-trail-dot {
+    display: none !important;
+  }
+}
+
+/* --- 4K & Ultra-Wide Screens (>= 1800px) --- */
+@media (min-width: 1800px) {
+  :root {
+    --text-hero: 5.5rem;
+  }
+
+  .container,
+  .section-container {
+    max-width: 1560px;
+  }
+}
